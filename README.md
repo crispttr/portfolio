@@ -1,38 +1,29 @@
-# .
+# Portfolio — Cristian Pottier
 
-This template should help get you started developing with Vue 3 in Vite.
+Portfolio personnel présentant mes projets en ingénierie des médias (HEIG-VD).
 
-## Recommended IDE Setup
+🔗 [cristianpottier.ch](https://cristianpottier.ch)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Stack technique
 
-## Recommended Browser Setup
+- Vue 3 (Composition API, `<script setup>`)
+- Vite
+- Vue Router
+- Tailwind CSS v4
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Développement local
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+```bash
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+L'application tourne sur `http://localhost:5173`.
 
-```sh
+## Build
+
+```bash
 npm run build
 ```
+
+## Structure
