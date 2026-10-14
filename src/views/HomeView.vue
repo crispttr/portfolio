@@ -2,7 +2,19 @@
 import GridBackground from '../components/GridBackground.vue'
 import { projects } from '../data/projects.js'
 
-const skills = ['UI Design', 'UX Design', 'Prototypage (Figma)', 'Design System', 'Création visuelle', 'Gestion de projet']
+const skills = ['UI Design', 'UX Design', 'Design System', 'Création visuelle', 'Gestion de projet']
+const tools = [
+  { name: 'Figma', icon: 'https://cdn.simpleicons.org/figma' },
+  { name: 'Photoshop', icon: null },
+  { name: 'Premiere Pro', icon: null },
+  { name: 'Illustrator', icon: null },
+  { name: 'WordPress', icon: 'https://cdn.simpleicons.org/wordpress' },
+  { name: 'VS Code', icon: null },
+  { name: 'Canva', icon: null },
+  { name: 'Vue.js', icon: 'https://cdn.simpleicons.org/vuedotjs' },
+  { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript' },
+  { name: 'PHP', icon: 'https://cdn.simpleicons.org/php' },
+]
 </script>
 
 <template>
@@ -45,7 +57,7 @@ const skills = ['UI Design', 'UX Design', 'Prototypage (Figma)', 'Design System'
     </div>
   </section>
 
-  <section id="about" class="py-32" style="background:#0A0A0A">
+  <section id="about" class="min-h-screen flex items-center py-32" style="background:#0A0A0A">
     <div class="max-w-6xl mx-auto px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
         <div>
@@ -58,10 +70,23 @@ const skills = ['UI Design', 'UX Design', 'Prototypage (Figma)', 'Design System'
           </p>
         </div>
         <div>
-          <p class="text-xs tracking-widest uppercase font-mono mb-8" style="color:#333333; letter-spacing:0.2em">Compétences</p>
-          <div class="flex flex-wrap gap-2.5">
+          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#333333; letter-spacing:0.2em">Compétences</p>
+          <div class="flex flex-wrap gap-2.5 mb-10">
             <span v-for="skill in skills" :key="skill" class="skill-pill text-xs px-4 py-2 font-mono cursor-default" style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.04em">
               {{ skill }}
+            </span>
+          </div>
+
+          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#333333; letter-spacing:0.2em">Outils</p>
+          <div class="flex flex-wrap gap-2.5">
+            <span
+              v-for="tool in tools"
+              :key="tool.name"
+              class="skill-pill text-xs px-4 py-2 font-mono cursor-default flex items-center gap-2"
+              style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.04em"
+            >
+              <img v-if="tool.icon" :src="tool.icon" :alt="tool.name" style="width:14px; height:14px" />
+              {{ tool.name }}
             </span>
           </div>
         </div>
@@ -82,7 +107,7 @@ const skills = ['UI Design', 'UX Design', 'Prototypage (Figma)', 'Design System'
           class="project-card group cursor-pointer block"
           style="background:#111111; border:1px solid rgba(255,255,255,0.07); border-radius:10px; overflow:hidden"
         >
-                   <div class="relative overflow-hidden" style="height:200px; background:#111111">
+          <div class="relative overflow-hidden" style="height:200px; background:#111111">
             <img
               v-if="project.images && project.images[0]"
               :src="project.images[0]"

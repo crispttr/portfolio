@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="py-40" style="background:#0A0A0A; border-top:1px solid rgba(255,255,255,0.05)">
+    <section id="contact" class="min-h-screen flex items-center py-40" style="background:#0A0A0A; border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-6xl mx-auto px-8 text-center">
       <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#00E5FF; letter-spacing:0.2em">Contact</p>
       <h2 class="text-4xl lg:text-6xl font-black text-white mb-4">Un projet en tête ?<br />Discutons-en.</h2>

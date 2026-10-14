@@ -1,10 +1,26 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
 
 const scrolled = ref(false)
 function handler() { scrolled.value = window.scrollY > 20 }
 onMounted(() => window.addEventListener('scroll', handler))
 onUnmounted(() => window.removeEventListener('scroll', handler))
+
+const router = useRouter()
+const route = useRoute()
+
+function scrollToSection(id) {
+  if (route.path !== '/') {
+    router.push('/').then(() => {
+      setTimeout(() => {
+        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+      }, 150)
+    })
+  } else {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+  }
+}
 </script>
 
 <template>
@@ -21,9 +37,9 @@ onUnmounted(() => window.removeEventListener('scroll', handler))
         Cristian Pottier
       </router-link>
       <ul class="flex gap-10">
-        <li><a href="#about" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">About</a></li>
-        <li><a href="#projects" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">Projects</a></li>
-        <li><a href="#contact" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">Contact</a></li>
+        <li><a href="#" @click.prevent="scrollToSection('about')" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">About</a></li>
+        <li><a href="#" @click.prevent="scrollToSection('projects')" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">Projects</a></li>
+        <li><a href="#" @click.prevent="scrollToSection('contact')" class="nav-link text-sm text-neutral-400" style="letter-spacing:0.04em">Contact</a></li>
       </ul>
     </div>
   </nav>
