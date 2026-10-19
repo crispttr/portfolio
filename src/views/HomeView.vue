@@ -33,8 +33,8 @@ function scrollToSection(id) {
           <h1 class="text-6xl lg:text-7xl xl:text-8xl font-black leading-none tracking-tight text-white mb-6" style="line-height:0.95">
             Cristian<br />Pottier.
           </h1>
-          <p class="text-xl lg:text-2xl font-light mb-10" style="color:#888888">Ingénieur des médias</p>
-          <p class="text-base leading-relaxed max-w-md" style="color:#555555; font-weight:300">
+          <p class="text-xl lg:text-2xl font-light mb-10" style="color:#bbbbbb">Ingénieur des médias</p>
+          <p class="text-base leading-relaxed max-w-md" style="color:#a3a3a3; font-weight:300">
             Diplômé en ingénierie des médias, passionné par le marketing digital et l'UX/UI, je conçois des interfaces qui allient stratégie et expérience utilisateur.
           </p>
           <div class="mt-12 flex flex-wrap gap-4 items-center">
@@ -72,25 +72,25 @@ function scrollToSection(id) {
           <h2 class="text-4xl lg:text-5xl font-bold text-white leading-tight mb-8" style="line-height:1.1">
             Le design à la<br />croisée de la forme<br />et de la fonction.
           </h2>
-          <p class="text-base leading-relaxed" style="color:#555555; font-weight:300; max-width:38ch">
+          <p class="text-base leading-relaxed" style="color:#a3a3a3; font-weight:300; max-width:38ch">
             Passionné par l'UX/UI, la conception d'interfaces intuitives et la création visuelle appliquée aux produits numériques.
           </p>
         </div>
         <div>
-          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#333333; letter-spacing:0.2em">Compétences</p>
+          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#8a8a8a; letter-spacing:0.2em">Compétences</p>
           <div class="flex flex-wrap gap-2.5 mb-10">
-            <span v-for="skill in skills" :key="skill" class="skill-pill text-xs px-4 py-2 font-mono cursor-default" style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.04em">
+            <span v-for="skill in skills" :key="skill" class="skill-pill text-xs px-4 py-2 font-mono cursor-default" style="border:1px solid rgba(255,255,255,0.12); color:#bbbbbb; letter-spacing:0.04em">
               {{ skill }}
             </span>
           </div>
 
-          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#333333; letter-spacing:0.2em">Outils</p>
+          <p class="text-xs tracking-widest uppercase font-mono mb-6" style="color:#8a8a8a; letter-spacing:0.2em">Outils</p>
           <div class="flex flex-wrap gap-2.5">
             <span
               v-for="tool in tools"
               :key="tool.name"
               class="skill-pill text-xs px-4 py-2 font-mono cursor-default flex items-center gap-2"
-              style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.04em"
+              style="border:1px solid rgba(255,255,255,0.12); color:#bbbbbb; letter-spacing:0.04em"
             >
               <img v-if="tool.icon" :src="tool.icon" :alt="tool.name" style="width:14px; height:14px" />
               {{ tool.name }}
@@ -124,7 +124,7 @@ function scrollToSection(id) {
             <div class="absolute inset-0" style="background:linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0.15))"></div>
             <div class="absolute inset-0 flex items-end p-6">
               <div class="flex gap-2 flex-wrap">
-                <span v-for="tag in project.tags" :key="tag" class="text-xs font-mono px-2.5 py-1" style="background:rgba(0,0,0,0.5); color:#666666; border:1px solid rgba(255,255,255,0.08); border-radius:4px">
+                <span v-for="tag in project.tags" :key="tag" class="text-xs font-mono px-2.5 py-1" style="background:rgba(0,0,0,0.5); color:#aaaaaa; border:1px solid rgba(255,255,255,0.08); border-radius:4px">
                   {{ tag }}
                 </span>
               </div>
@@ -133,8 +133,8 @@ function scrollToSection(id) {
           <div class="p-6">
             <p class="text-xs font-mono mb-2" style="color:#00E5FF; letter-spacing:0.1em">{{ project.category }}</p>
             <h3 class="text-base font-semibold text-white mb-2">{{ project.title }}</h3>
-            <p class="text-sm leading-relaxed" style="color:#555555; font-weight:300">{{ project.shortDescription }}</p>
-            <div class="mt-5 flex items-center gap-1" style="color:#333333">
+            <p class="text-sm leading-relaxed" style="color:#a3a3a3; font-weight:300">{{ project.shortDescription }}</p>
+            <div class="mt-5 flex items-center gap-1" style="color:#8a8a8a">
               <span class="text-xs font-mono tracking-widest">VOIR LE PROJET</span>
               <span class="text-xs transition-transform duration-200 group-hover:translate-x-1">-&gt;</span>
             </div>

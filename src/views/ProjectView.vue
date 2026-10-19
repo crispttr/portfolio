@@ -13,7 +13,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
       <router-link
         to="/"
         class="inline-flex items-center gap-2 text-sm font-mono mb-16 transition-colors duration-200 hover:text-white"
-        style="color:#666666; letter-spacing:0.06em"
+        style="color:#aaaaaa; letter-spacing:0.06em"
       >
         &larr; Retour aux projets
       </router-link>
@@ -25,7 +25,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
         <h1 class="text-4xl lg:text-6xl font-black text-white mb-8" style="line-height:1.05; letter-spacing:-0.02em">
           {{ project.title }}
         </h1>
-        <p class="text-lg leading-relaxed mb-16" style="color:#888888; font-weight:300; max-width:55ch">
+        <p class="text-lg leading-relaxed mb-16" style="color:#bbbbbb; font-weight:300; max-width:55ch">
           {{ project.shortDescription }}
         </p>
 
@@ -40,19 +40,19 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
 
         <div class="flex flex-col gap-14 mb-16">
           <div>
-            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Contexte</h2>
+            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Contexte</h2>
             <p class="text-base leading-relaxed" style="color:#999999; font-weight:300; max-width:65ch">{{ project.context }}</p>
           </div>
 
           <div>
-            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Mon rôle</h2>
+            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Mon rôle</h2>
             <p class="text-base leading-relaxed" style="color:#999999; font-weight:300; max-width:65ch">{{ project.role }}</p>
           </div>
         </div>
 
         <div style="display:grid; grid-template-columns: 2fr 1fr; gap:4rem; margin-bottom:4rem" class="fonctionnalites-outils-row">
           <div v-if="project.features">
-            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Fonctionnalités</h2>
+            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Fonctionnalités</h2>
             <ul class="flex flex-col gap-2">
               <li v-for="feature in project.features" :key="feature" class="text-base leading-relaxed" style="color:#999999; font-weight:300">
                 - {{ feature }}
@@ -61,13 +61,13 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
           </div>
 
           <div>
-            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Outils</h2>
+            <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Outils</h2>
             <div class="flex flex-col gap-2.5">
               <span
                 v-for="tool in project.tools"
                 :key="tool"
                 class="text-xs font-mono px-3 py-2 w-fit"
-                style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.03em"
+                style="border:1px solid rgba(255,255,255,0.12); color:#bbbbbb; letter-spacing:0.03em"
               >
                 {{ tool }}
               </span>
@@ -76,7 +76,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
         </div>
 
         <div class="mb-16">
-          <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Démarche</h2>
+          <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Démarche</h2>
           <ul class="flex flex-col gap-3">
             <li v-for="(step, i) in project.approach" :key="i" class="flex gap-4 text-base" style="color:#999999; font-weight:300">
               <span class="font-mono text-sm" style="color:#00E5FF">{{ String(i + 1).padStart(2, '0') }}</span>
@@ -95,7 +95,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
         </div>
 
         <div class="mb-16">
-          <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#333333; letter-spacing:0.15em">Résultat</h2>
+          <h2 class="text-xs tracking-widest uppercase font-mono mb-4" style="color:#8a8a8a; letter-spacing:0.15em">Résultat</h2>
           <p class="text-base leading-relaxed" style="color:#999999; font-weight:300; max-width:65ch">{{ project.outcome }}</p>
         </div>
 
@@ -114,7 +114,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
             :href="project.externalLink"
             target="_blank"
             class="text-sm font-medium transition-colors duration-200 hover:text-white"
-            style="color:#555555; letter-spacing:0.06em"
+            style="color:#a3a3a3; letter-spacing:0.06em"
           >
             Voir le code source -&gt;
           </a>
@@ -122,7 +122,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
       </template>
 
       <template v-else>
-        <p class="text-base" style="color:#666666">Projet introuvable.</p>
+        <p class="text-base" style="color:#aaaaaa">Projet introuvable.</p>
       </template>
     </div>
   </section>
