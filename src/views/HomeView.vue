@@ -15,6 +15,10 @@ const tools = [
   { name: 'JavaScript', icon: 'https://cdn.simpleicons.org/javascript' },
   { name: 'PHP', icon: 'https://cdn.simpleicons.org/php' },
 ]
+
+function scrollToSection(id) {
+  document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+}
 </script>
 
 <template>
@@ -34,10 +38,10 @@ const tools = [
             Diplômé en ingénierie des médias, passionné par le marketing digital et l'UX/UI, je conçois des interfaces qui allient stratégie et expérience utilisateur.
           </p>
           <div class="mt-12 flex gap-6 items-center">
-            <a href="#projects" class="text-sm font-medium px-6 py-3 border border-white text-white transition-all duration-200 hover:bg-white hover:text-black" style="letter-spacing:0.06em">
+            <a href="#" @click.prevent="scrollToSection('projects')" class="text-sm font-medium px-6 py-3 border border-white text-white transition-all duration-200 hover:bg-white hover:text-black" style="letter-spacing:0.06em">
               Voir mes projets
             </a>
-            <a href="#contact" class="text-sm font-medium transition-colors duration-200 hover:text-white" style="color:#555555; letter-spacing:0.06em">
+            <a href="#" @click.prevent="scrollToSection('contact')" class="text-sm font-medium transition-colors duration-200 hover:text-white" style="color:#555555; letter-spacing:0.06em">
               Me contacter -&gt;
             </a>
           </div>
@@ -85,7 +89,7 @@ const tools = [
               class="skill-pill text-xs px-4 py-2 font-mono cursor-default flex items-center gap-2"
               style="border:1px solid rgba(255,255,255,0.12); color:#888888; letter-spacing:0.04em"
             >
-              <img v-if="tool.icon" :src="tool.icon" :alt="tool.name" style="width:14px; height:14px" />
+              <img v-if="tool.icon" :src="tool.icon" :alt="tool.name" style="width:14px; height:14px; filter:grayscale(1) brightness(1.3); opacity:0.8" />
               {{ tool.name }}
             </span>
           </div>

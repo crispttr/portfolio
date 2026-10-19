@@ -99,7 +99,7 @@ const project = computed(() => projects.find(p => p.slug === props.slug))
           <p class="text-base leading-relaxed" style="color:#999999; font-weight:300; max-width:65ch">{{ project.outcome }}</p>
         </div>
 
-        <div class="flex flex-wrap gap-4 mt-20">
+        <div class="flex flex-wrap items-center gap-6 mt-20">
           <a
             v-if="project.liveLink"
             :href="project.liveLink"
